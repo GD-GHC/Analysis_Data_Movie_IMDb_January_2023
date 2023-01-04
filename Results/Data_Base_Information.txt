@@ -1,0 +1,54 @@
+Database Information:
+
+Tables: ['people', 'titles', 'akas', 'crew', 'episodes', 'ratings']
+
+Schema of table people:
+   cid       name     type  notnull dflt_value  pk
+0    0  person_id  VARCHAR        0       None   1
+1    1       name  VARCHAR        0       None   0
+2    2       born  INTEGER        0       None   0
+3    3       died  INTEGER        0       None   0
+********************************************************************************
+Schema of table titles:
+   cid             name     type  notnull dflt_value  pk
+0    0         title_id  VARCHAR        0       None   1
+1    1             type  VARCHAR        0       None   0
+2    2    primary_title  VARCHAR        0       None   0
+3    3   original_title  VARCHAR        0       None   0
+4    4         is_adult  INTEGER        0       None   0
+5    5        premiered  INTEGER        0       None   0
+6    6            ended  INTEGER        0       None   0
+7    7  runtime_minutes  INTEGER        0       None   0
+8    8           genres  VARCHAR        0       None   0
+********************************************************************************
+Schema of table akas:
+   cid               name     type  notnull dflt_value  pk
+0    0           title_id  VARCHAR        0       None   0
+1    1              title  VARCHAR        0       None   0
+2    2             region  VARCHAR        0       None   0
+3    3           language  VARCHAR        0       None   0
+4    4              types  VARCHAR        0       None   0
+5    5         attributes  VARCHAR        0       None   0
+6    6  is_original_title  INTEGER        0       None   0
+********************************************************************************
+Schema of table crew:
+   cid        name     type  notnull dflt_value  pk
+0    0    title_id  VARCHAR        0       None   0
+1    1   person_id  VARCHAR        0       None   0
+2    2    category  VARCHAR        0       None   0
+3    3         job  VARCHAR        0       None   0
+4    4  characters  VARCHAR        0       None   0
+********************************************************************************
+Schema of table episodes:
+   cid              name     type  notnull dflt_value  pk
+0    0  episode_title_id  VARCHAR        0       None   0
+1    1     show_title_id  VARCHAR        0       None   0
+2    2     season_number  INTEGER        0       None   0
+3    3    eposide_number  INTEGER        0       None   0
+********************************************************************************
+Schema of table ratings:
+   cid      name     type  notnull dflt_value  pk
+0    0  title_id  VARCHAR        0       None   1
+1    1    rating  INTEGER        0       None   0
+2    2     votes  INTEGER        0       None   0
+********************************************************************************
